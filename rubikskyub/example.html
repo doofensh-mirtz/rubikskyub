@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubik's Cube Guide | Example Solves</title>
+    <link rel="stylesheet" href="example.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                <img src="images/logo.png" alt="rubiks logo">
+                </a>
+            </div>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#">More Guides</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Rubik's 2x2</a></li>
+                        <li><a href="#">Rubik's 4x4</a></li>
+                        <li><a href="#">Rubik's 5x5</a></li>
+                        <li><a href="example.html">Example Solves</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">History</a></li>
+                <li>
+                    <a href="javascript:void(0);" class="login-logo" onclick="openDialog('loginRegisterDialog')">
+                        <img src="images/login.png" alt="Login" class="login-icon">
+                    </a>
+                </li>                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="loginRegisterDialog" class="dialog">
+            <div class="dialog-content">
+                <span class="close" onclick="closeDialog('loginRegisterDialog')">&times;</span>
+                
+                <!-- Login Form -->
+                <div id="loginForm">
+                    <h2>Login</h2>
+                    <form>
+                        <label for="login-username">Username:</label>
+                        <input type="text" id="login-username" placeholder="Enter your username">
+                        
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" placeholder="Enter your password">
+                        
+                        <button type="submit" class="button">Login</button>
+                    </form>
+                    <p>Don't have an account? <a href="javascript:void(0);" onclick="toggleForm('registerForm')">Register here</a></p>
+                </div>
+        
+                <!-- Register Form (Hidden by Default) -->
+                <div id="registerForm" style="display: none;">
+                    <h2>Register</h2>
+                    <form>
+                        <label for="register-username">Username:</label>
+                        <input type="text" id="register-username" placeholder="Enter your username">
+                        
+                        <label for="register-email">Email:</label>
+                        <input type="email" id="register-email" placeholder="Enter your email">
+                        
+                        <label for="register-password">Password:</label>
+                        <input type="password" id="register-password" placeholder="Enter your password">
+                        
+                        <button type="submit" class="button">Register</button>
+                    </form>
+                    <p>Already have an account? <a href="javascript:void(0);" onclick="toggleForm('loginForm')">Login here</a></p>
+                    </div>
+                    </div>
+                </div>
+                <section id="example-solves">
+                    <h1>Example Solves</h1>
+                    <p>Click on a solved cube to see the scramble and solution.</p>
+                
+                    <div class="image-gallery">
+                        <img src="images/s1.jpg" alt="Solve 1" onclick="openSolveDialog('solve1')">
+                        <img src="images/s2.jpg" alt="Solve 2" onclick="openSolveDialog('solve2')">
+                        <img src="images/s3.jpg" alt="Solve 3" onclick="openSolveDialog('solve3')">
+                        <img src="images/s4.jpg" alt="Solve 4" onclick="openSolveDialog('solve4')">
+                        <img src="images/s5.jpg" alt="Solve 5" onclick="openSolveDialog('solve5')">
+                        <img src="images/s6.jpg" alt="Solve 6" onclick="openSolveDialog('solve6')">
+                    </div>
+                </section>
+                
+                <div id="solveDialog" class="dialogSolve">
+                    <div class="dialog-contentSolve">
+                        <span class="closeSolve" onclick="closeSolveDialog()">&times;</span>
+                        <h2 id="solveTitle">Solve Details</h2>
+                
+                        <div class="dialog-body">
+                            <img id="scrambleImage" src="" alt="Scrambled Cube">
+                            <div class="solve-info">
+                                <p><strong>Scramble:</strong> <span id="scrambleText"></span></p>
+                                <p><strong>Solution:</strong> <span id="solutionText"></span></p>
+                                <p><strong>Time:</strong> <span id="solveTime"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section id="solve-guide">
+                    <div class="guide-content">
+                        <div class="guide-text">
+                            <h2>Did you really think you could solve this without help?</h2>
+                            <p>There are 43 quintillion ways to mess this up. Luckily, there’s only one guide you need. Download your 3×3 solution now and pretend you knew it all along!</p>
+                            <a href="#" download class="download-btn">Download 3×3 Guide</a>
+                        </div>
+                        <div class="guide-image">
+                            <img src="images/exampleimg.png" alt="Rubik's Cube">
+                        </div>
+                    </div>
+                </section>
+                
+    </main>
+    <footer>
+        <p>&copy; 2024 Rubik's Cube World. All rights reserved.</p>
+                <ul class="social-media-icons">
+                    <li><a class="twitter" href="https://x.com" target="_blank"></a></li>
+                    <li><a class="facebook" href="https://facebook.com" target="_blank"></a></li>
+                    <li><a class="dribbble" href="https://dribbble.com" target="_blank"></a></li>
+                    <li><a class="pinterest" href="https://pinterest.com" target="_blank"></a></li>
+                    <li><a class="deviantart" href="https://deviantart.com" target="_blank"></a></li>
+                </ul>
+    </footer>
+    <script src="example.js"></script>
+</body>
+</html>
